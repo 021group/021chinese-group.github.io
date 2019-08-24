@@ -1,0 +1,112 @@
+@import 'global-var.css';
+@import 'nav.css';
+@import 'experimental.css';
+
+* { box-sizing: border-box;  }
+body { margin: 0; padding: 0; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; }
+
+body {
+    line-height: 1.2em;
+    font-size: 110%;
+}
+
+.box {
+    /* width: 150px; */
+    /* height: 150px; */
+    margin: 1em;
+    border-radius: 0.3em;
+    transition: .5s;
+    padding: 1em 0.5em;
+    text-align: center;
+    display: inline-block;
+    /* border: 1px solid black; */
+    box-shadow: 0 0 .5em #00000044;
+    background-color: #FFF;
+}
+
+.box:hover {
+    box-shadow: .3em .3em 1em #00000088;
+    transform: translate(-.2em, -.2em) scale(1.03);
+}
+
+main {
+    padding: 2em var(--side-padding);
+    /* background-color: var(--ceg-g); */
+}
+
+/* ------- a (links) -------- */
+a.link {
+    text-decoration: none;
+    color: unset;
+    border-bottom: .1em solid var(--ceg-db);
+    position: relative;
+    transition: 0.2s ease-out;
+    color: var(--ceg-db);
+}
+
+a.link:hover {
+    color: var(--ceg-lb);
+}
+
+a.link::before {
+    content: "";
+    display: block; position: absolute;
+    top: 0; left: 50%;
+    width: 0; height: 100%;
+    z-index: 1;
+    transition: 0.2s ease-out;
+    border-bottom: .1em solid var(--ceg-lb);
+}
+
+a.link:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+
+
+/* ------- test -------- */
+/* Alternative approach to hstrip */
+.test {
+    color: white;
+    font-size: 3em;
+    padding: 2em var(--side-padding);
+    width: calc(100% + 2 * var(--side-padding));
+    transform: translateX(calc( -1 * var(--side-padding)));
+    background-image: linear-gradient(to left bottom, var(--ceg-y), var(--ceg-r));
+}
+
+/* ------ wrapper ----- */
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper .box {
+    /* display: block; */
+    flex: 1;
+    color: white;
+    text-align: left;
+    background-image: url('../assets/photo1.png');
+    /* background-attachment: fixed; */
+    /* background-blend-mode: luminosity; */
+    background-size: 120%;
+}
+
+.wrapper .box > a.link {
+    color: white;
+}
+
+.wrapper .box h4, .wrapper .box p {
+    filter: drop-shadow(.1em .1em .2em black);
+}
+
+.wrapper .box h4 {
+    margin: 1em 0;
+    font-weight: 100;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    /* letter-spacing: .1em; */
+}
+

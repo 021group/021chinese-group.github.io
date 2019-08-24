@@ -1,0 +1,104 @@
+/* -------- nav --------- */
+
+:root {
+    --nav-height: 3.2em;
+}
+
+nav {
+    padding: 0.2em var(--side-padding);
+    height: var(--nav-height);
+    background-color: none;
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 1;
+}
+
+nav > ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* Resetting defaults ends */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > ol > li {
+    display: block;
+    /* Resetting defaults ends */
+    height: calc(100% - 0.2em * 2);
+    flex: 1;
+    margin: 0.5em 0.2em;
+    text-align: center;
+    color: white;              /* <-- text color */
+    position: relative;
+}
+
+nav > ol > li > a {
+    text-decoration: none;
+    /* Resetting defaults ends */
+    font-weight: 500;
+    color: inherit;
+
+    display: block; /* The link is the only element, make it fill the whole box */
+    width: 100%;
+    height: 100%;
+    padding: .5em 10px;
+    text-align: center;
+}
+
+/* ----- Button Animation ------- */
+
+nav > ol > li {
+    /* Setting up variables for animation */
+    --width: 80%; /* How wide the line is */
+}
+
+nav > ol > li:not(:first-child)::before {
+    content: "";
+    display: block;
+    width: 0%; height: 100%;
+    top: 0; left: 50%;
+    border-bottom: .2em solid white;
+    position: absolute;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav > ol > li:hover::before {
+    left: calc((100% - var(--width)) / 2);
+    width: var(--width);
+}
+
+/* ------- Formatting Logo ------ */
+
+nav > ol > li:nth-child(1) {
+    height: 100%;
+}
+
+nav > ol > li:nth-child(1) > a {
+    padding: 0;
+}
+
+#nav-logo {
+    height: 100%;
+    filter: drop-shadow(0 0 0 var(--ceg-db));
+    transition: filter .5s;
+}
+
+#nav-logo:hover {
+    filter: drop-shadow(0 0 .5em white);
+}
+
+.hstrip {
+    color: white;
+    font-size: 3em;
+    padding: 2em var(--side-padding);
+    padding-top: calc(2em + var(--nav-height));
+    width: 100%;
+    background-image: linear-gradient(to bottom, var(--ceg-lb), var(--ceg-db));
+    transform: translateY(calc( -1 * var(--nav-height)));
+    z-index: 0;
+}

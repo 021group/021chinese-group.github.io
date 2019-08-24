@@ -1,0 +1,72 @@
+:root {
+    /* Dimensions */
+    --side-padding: 20%;
+
+    /* Colors */
+    --ceg-db-R: 11;
+    --ceg-db-G: 52;
+    --ceg-db-B: 92;
+    --ceg-db: rgb( var(--ceg-db-R), var(--ceg-db-G), var(--ceg-db-B) );
+
+    --ceg-lb-R: 33;
+    --ceg-lb-G: 99;
+    --ceg-lb-B: 168;
+    --ceg-lb: rgb( var(--ceg-lb-R), var(--ceg-lb-G), var(--ceg-lb-B) );
+
+    --ceg-y-R: 225;
+    --ceg-y-G: 241;
+    --ceg-y-B: 0;
+    --ceg-y: rgb( var(--ceg-y-R), var(--ceg-y-G), var(--ceg-y-B) );
+
+    --ceg-r-R: 231;
+    --ceg-r-G: 31;
+    --ceg-r-B: 25;
+    --ceg-r: rgb( var(--ceg-r-R), var(--ceg-r-G), var(--ceg-r-B) );
+
+    --ceg-g-R: 105;
+    --ceg-g-G: 184;
+    --ceg-g-B: 45;
+    --ceg-g: rgb( var(--ceg-g-R), var(--ceg-g-G), var(--ceg-g-B) );
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    :root {
+        --side-padding: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    :root {
+        --side-padding: 30px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    :root {
+        --side-padding: 61px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    :root {
+        --side-padding: 148px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    :root {
+        --side-padding: 240px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    :root {
+        --side-padding: 240px;
+    }
+}
