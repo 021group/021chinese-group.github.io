@@ -49,11 +49,11 @@ nav > ol > li > a {
     text-align: center;
 }
 
-/* ----- Button Animation ------- */
+/* ----- link Animation ------- */
 
 nav > ol > li {
     /* Setting up variables for animation */
-    --width: 80%; /* How wide the line is */
+    --width: 80%;      /* How wide the line is */
 }
 
 nav > ol > li:not(:first-child)::before {
@@ -65,12 +65,15 @@ nav > ol > li:not(:first-child)::before {
     position: absolute;
     transition-duration: .2s;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: -1;
 }
 
-nav > ol > li:hover::before {
+nav > ol > li:not(:first-child):hover::before,
+nav > ol > li.on-this-page:not(:first-child)::before {
     left: calc((100% - var(--width)) / 2);
     width: var(--width);
 }
+
 
 /* ------- Formatting Logo ------ */
 

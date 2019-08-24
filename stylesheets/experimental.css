@@ -1,0 +1,46 @@
+
+/* ------- test -------- */
+/* Alternative approach to hstrip */
+.test {
+    color: white;
+    font-size: 3em;
+    padding: 2em var(--side-padding);
+    width: calc(100% + 2 * var(--side-padding));
+    transform: translateX(calc( -1 * var(--side-padding)));
+    background-image: linear-gradient(to left bottom, var(--ceg-y), var(--ceg-r));
+}
+
+/* ------ wrapper ----- */
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper .box {
+    /* display: block; */
+    flex: 1;
+    color: white;
+    text-align: left;
+    background-image: url('../assets/photo1.png');
+    /* background-attachment: fixed; */
+    /* background-blend-mode: luminosity; */
+    background-size: 120%;
+}
+
+.wrapper .box > a.link {
+    color: white;
+}
+
+.wrapper .box h4, .wrapper .box p {
+    filter: drop-shadow(.1em .1em .2em black);
+}
+
+.wrapper .box h4 {
+    margin: 1em 0;
+    font-weight: 100;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    /* letter-spacing: .1em; */
+}
+
