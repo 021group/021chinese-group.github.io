@@ -1,6 +1,7 @@
 
 /* ------- test -------- */
 /* Alternative approach to hstrip */
+/* This element must be placed inside of main */
 .test {
     color: white;
     font-size: 3em;

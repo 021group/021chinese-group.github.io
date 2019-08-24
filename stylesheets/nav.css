@@ -1,28 +1,45 @@
 /* -------- nav --------- */
 
-:root {
-    --nav-height: 3.2em;
+nav {
+    --nav-ol-height: 3.2rem;
+    --nav-ol-overshot: 3rem;
 }
 
-nav {
-    padding: 0.2em var(--side-padding);
-    height: var(--nav-height);
-    background-color: none;
-    position: sticky;
-    position: -webkit-sticky;
-    z-index: 1;
+nav.light {
+    --nav-text-color: var(--ceg-db);
+    --nav-border-color: var(--ceg-db);
+    --nav-logo-shadow-color: var(--ceg-db);
+}
+
+nav.dark {
+    --nav-text-color: white;
+    --nav-border-color: white;
+    --nav-logo-shadow-color: white;
+}
+
+nav.simple {
+    --nav-bg-color: white;
+}
+nav.compound {
+    --nav-bg-color: none;
 }
 
 nav > ol {
     list-style-type: none;
     margin: 0;
-    padding: 0;
     /* Resetting defaults ends */
-    height: 100%;
+    padding: 0.2em var(--side-padding);
+    min-height: var(--nav-ol-height);
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    z-index: 1;
+
+    background-color: var(--nav-bg-color);
 }
 
 nav > ol > li {
@@ -32,15 +49,16 @@ nav > ol > li {
     flex: 1;
     margin: 0.5em 0.2em;
     text-align: center;
-    color: white;              /* <-- text color */
     position: relative;
+
+    color: var(--nav-text-color);
 }
 
 nav > ol > li > a {
     text-decoration: none;
+    color: inherit;
     /* Resetting defaults ends */
     font-weight: 500;
-    color: inherit;
 
     display: block; /* The link is the only element, make it fill the whole box */
     width: 100%;
@@ -61,11 +79,11 @@ nav > ol > li:not(:first-child)::before {
     display: block;
     width: 0%; height: 100%;
     top: 0; left: 50%;
-    border-bottom: .2em solid white;
     position: absolute;
     transition-duration: .2s;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: -1;
+    border-bottom: .2em solid var(--nav-border-color);
 }
 
 nav > ol > li:not(:first-child):hover::before,
@@ -77,31 +95,30 @@ nav > ol > li.on-this-page:not(:first-child)::before {
 
 /* ------- Formatting Logo ------ */
 
-nav > ol > li:nth-child(1) {
-    height: 100%;
-}
-
 nav > ol > li:nth-child(1) > a {
     padding: 0;
 }
 
 #nav-logo {
-    height: 100%;
-    filter: drop-shadow(0 0 0 var(--ceg-db));
+    height: var(--nav-ol-height);
+    filter: drop-shadow(0 0 0 white);
     transition: filter .5s;
 }
 
 #nav-logo:hover {
-    filter: drop-shadow(0 0 .5em white);
+    filter: drop-shadow(0 0 .5em var(--nav-logo-shadow-color));
 }
 
-.hstrip {
-    color: white;
+h1 {
     font-size: 3em;
+    font-weight: normal;
+    margin: 0;
+    /* Overriding defaults ends */
+    color: white;
     padding: 2em var(--side-padding);
-    padding-top: calc(2em + var(--nav-height));
+    padding-top: calc(2em + var(--nav-ol-height) + var(--nav-ol-overshot));
     width: 100%;
-    background-image: linear-gradient(to bottom, var(--ceg-lb), var(--ceg-db));
-    transform: translateY(calc( -1 * var(--nav-height)));
+    background-image: linear-gradient(to bottom, var(--ceg-lb), #174f87, var(--ceg-db));
+    transform: translateY(calc( -1 * (var(--nav-ol-height) + var(--nav-ol-overshot))));
     z-index: 0;
 }

@@ -7,7 +7,7 @@ body { margin: 0; padding: 0; font-family: -apple-system,BlinkMacSystemFont,"Seg
 
 body {
     line-height: 1.2em;
-    font-size: 110%;
+    /* font-size: 100%; */
 }
 
 main {
@@ -62,4 +62,14 @@ main {
 a.link:hover::before {
     left: 0;
     width: 100%;
+}
+
+/* ----- footer ----- */
+
+footer {
+    /* min-height: 10em; */
+    background-color: #a2a2a2;
+    padding: 4em var(--side-padding);
+    color: #eee;
+    text-align: center;
 }
