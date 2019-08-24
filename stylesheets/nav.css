@@ -22,6 +22,7 @@ nav.simple {
 }
 nav.compound {
     --nav-bg-color: none;
+    margin-bottom: calc( -1 * (var(--nav-ol-height) + var(--nav-ol-overshot)));
 }
 
 nav > ol {
