@@ -2,7 +2,7 @@
 
 nav {
     --nav-ol-height: 3.2rem;
-    --nav-ol-overshot: 3rem;
+    --nav-strip-overshot: 3rem;
 }
 
 nav.light {
@@ -22,7 +22,7 @@ nav.simple {
 }
 nav.compound {
     --nav-bg-color: none;
-    margin-bottom: calc( -1 * (var(--nav-ol-height) + var(--nav-ol-overshot)));
+    margin-bottom: calc( -1 * (var(--nav-ol-height) + var(--nav-strip-overshot)));
 }
 
 nav > ol {
@@ -110,16 +110,22 @@ nav > ol > li:nth-child(1) > a {
     filter: drop-shadow(0 0 .5em var(--nav-logo-shadow-color));
 }
 
-nav > h1.strip {
+nav > .strip {
+    background-image: linear-gradient(to bottom, var(--ceg-lb), #174f87, var(--ceg-db));
+    width: 100%;
+}
+
+nav > .merged {
+    padding-top: calc(2em + var(--nav-ol-height) + var(--nav-strip-overshot));
+    transform: translateY(calc( -1 * (var(--nav-ol-height) + var(--nav-strip-overshot))));
+    z-index: 0;
+}
+
+nav > h1 {
     font-size: 3em;
     font-weight: normal;
     margin: 0;
     /* Overriding defaults ends */
-    color: white;
     padding: 2em var(--side-padding);
-    padding-top: calc(2em + var(--nav-ol-height) + var(--nav-ol-overshot));
-    width: 100%;
-    background-image: linear-gradient(to bottom, var(--ceg-lb), #174f87, var(--ceg-db));
-    transform: translateY(calc( -1 * (var(--nav-ol-height) + var(--nav-ol-overshot))));
-    z-index: 0;
+    color: white;
 }
