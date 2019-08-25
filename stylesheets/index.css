@@ -1,0 +1,18 @@
+nav {
+    height: 100vh;
+}
+
+.video {
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-video {
+    min-width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.video-text {
+    color: white;
+}

@@ -110,7 +110,7 @@ nav > ol > li:nth-child(1) > a {
     filter: drop-shadow(0 0 .5em var(--nav-logo-shadow-color));
 }
 
-h1 {
+nav > h1.strip {
     font-size: 3em;
     font-weight: normal;
     margin: 0;
