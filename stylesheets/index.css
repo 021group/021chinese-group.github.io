@@ -1,18 +1,17 @@
 nav {
     /* --nav-text-color: gray !important; */
     --nav-video-overshot: 3rem;
+    --nav-video-height: 100vh;
 }
 
 .video {
     display: block;
-    /* height: 100vh; */
     border: .1em solid red;
     min-width: 100%;
-    height: calc(100vh + var(--nav-video-overshot));
+    height: calc(var(--nav-video-height) + var(--nav-video-overshot));
     transform: translateY(calc( -1 * (var(--nav-ol-height) + var(--nav-video-overshot))));
     overflow: hidden;
     display: flex;
-    /* justify-content: center; */
     justify-content: center;
 
     position: relative; /* for children */
