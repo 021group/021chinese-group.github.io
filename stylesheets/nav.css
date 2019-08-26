@@ -121,7 +121,7 @@ nav > .merged {
     z-index: 0;
 }
 
-nav > h1 {
+nav h1 {
     font-size: 3em;
     font-weight: normal;
     margin: 0;
