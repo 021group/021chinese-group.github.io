@@ -45,3 +45,15 @@
     /* letter-spacing: .1em; */
 }
 
+/* Customized heading format */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 1em 0;
+}
+
+h1 { font-size: 3.0em; } /* Title of the page */
+h2 { font-size: 2.5em; } /* Title of a main section */
+h3 { font-size: 2.2em; } /* Subsection title within a section */
+h4 { font-size: 1.9em; } /* Sub-subsection titles */
+h5 { font-size: 1.6em; } /* title for cards */
+h6 { font-size: 1.3em; } /* subtitle for cards */

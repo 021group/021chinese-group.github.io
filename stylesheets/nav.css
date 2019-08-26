@@ -121,11 +121,8 @@ nav > .merged {
     z-index: 0;
 }
 
-nav h1 {
-    font-size: 3em;
-    font-weight: normal;
-    margin: 0;
-    /* Overriding defaults ends */
-    padding: 2em var(--side-padding);
+nav > div > h1 {
     color: white;
+    padding: 2em var(--side-padding);
+    margin: 0;
 }
