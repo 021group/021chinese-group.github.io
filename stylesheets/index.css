@@ -4,18 +4,14 @@ nav {
     --nav-video-height: 100vh;
 }
 
-@media only screen and (min-width:600px) {
-    .video {
-        min-width: 100%;
-        height: calc(var(--nav-video-height) + var(--nav-video-overshot));
-        transform: translateY(calc( -1 * (var(--nav-ol-height) + var(--nav-video-overshot))));
-    }
-}
-
 @media only screen and (max-width:600px) {
     nav {
         --nav-video-overshot: 0;
         --nav-video-height: 0;
+    }
+
+    nav > ol {
+        background-image: linear-gradient(to bottom, var(--ceg-lb), var(--ceg-db));
     }
 
     .video-video {
@@ -29,10 +25,14 @@ nav {
 }
 
 .video {
-    border: .1em solid red;
     overflow: hidden;
     display: flex;
     justify-content: center;
+
+    min-width: 100%;
+    height: calc(var(--nav-video-height) + var(--nav-video-overshot));
+    transform: translateY(calc( -1 * (var(--nav-ol-height) + var(--nav-video-overshot))));
+
 
     position: relative; /* for children */
 }
