@@ -36,12 +36,30 @@ nav > ol {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-
-    z-index: 1;
 
     background-color: var(--nav-bg-color);
 }
+
+
+@media only screen and (min-width: 600px) {
+    nav > ol {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav > ol {
+        flex-direction: column;
+        background-color: var(--ceg-lb);
+    }
+
+    nav > ol > li {
+        position: relative;
+        z-index: 1;
+    }
+}
+
 
 nav > ol > li {
     display: block;
@@ -118,6 +136,7 @@ nav > .strip {
 nav > .merged {
     padding-top: calc(2em + var(--nav-ol-height) + var(--nav-strip-overshot));
     transform: translateY(calc( -1 * (var(--nav-ol-height) + var(--nav-strip-overshot))));
+    position: relative;
     z-index: 0;
 }
 
