@@ -39,27 +39,33 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     :root {
-        --side-padding: 150px;
+        --side-padding: 50px;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     :root {
-        --side-padding: 192px;
+        --side-padding: 80px;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     :root {
-        --side-padding: 248px;
+        --side-padding: 150px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    :root {
+        --side-padding: 190px;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     :root {
-        --side-padding: 300px;
+        --side-padding: 270px;
     }
 }
