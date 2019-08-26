@@ -15,9 +15,9 @@ main {
     /* background-color: var(--ceg-g); */
 }
 
-/* ----- box ------ */
+/* ----- card ------ */
 
-.box {
+.card {
     margin: 1em;
     border-radius: 0.3em;
     transition: .5s;
@@ -28,7 +28,7 @@ main {
     background-color: #FFF;
 }
 
-.box:hover {
+.card:hover {
     box-shadow: .3em .3em 1em #00000088;
     transform: translate(-.2em, -.2em) scale(1.03);
 }

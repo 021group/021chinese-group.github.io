@@ -17,7 +17,7 @@
     display: flex;
 }
 
-.wrapper .box {
+.wrapper .card {
     /* display: block; */
     flex: 1;
     color: white;
@@ -28,15 +28,15 @@
     background-size: 120%;
 }
 
-.wrapper .box > a.link {
+.wrapper .card > a.link {
     color: white;
 }
 
-.wrapper .box h4, .wrapper .box p {
+.wrapper .card h4, .wrapper .card p {
     filter: drop-shadow(.1em .1em .2em black);
 }
 
-.wrapper .box h4 {
+.wrapper .card h4 {
     margin: 1em 0;
     font-weight: 100;
     font-size: 1.2em;
