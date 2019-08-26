@@ -1,30 +1,46 @@
 
+.wrapper {
+    display: flex;
+}
+
+.wrapper .card {
+    flex: 1;
+    text-align: left;
+}
+
+
+.read-more {
+    /* content: "Read More →"; */
+    display: inline-block;
+    size: 10em 1em;
+}
+
 /* ------- test -------- */
 /* Alternative approach to hstrip */
 /* This element must be placed inside of main */
-.test {
+/* .test {
     color: white;
     font-size: 3em;
     padding: 2em var(--side-padding);
     width: calc(100% + 2 * var(--side-padding));
     transform: translateX(calc( -1 * var(--side-padding)));
     background-image: linear-gradient(to left bottom, var(--ceg-y), var(--ceg-r));
-}
+} */
 
 /* ------ wrapper ----- */
 
-.wrapper {
+/* .wrapper {
     display: flex;
 }
 
 .wrapper .card {
-    /* display: block; */
+    /* display: block;
     flex: 1;
     color: white;
     text-align: left;
     background-image: url('../assets/photo1.png');
-    /* background-attachment: fixed; */
-    /* background-blend-mode: luminosity; */
+    /* background-attachment: fixed;
+    /* background-blend-mode: luminosity;
     background-size: 120%;
 }
 
@@ -42,18 +58,4 @@
     font-size: 1.2em;
     text-transform: uppercase;
     font-family: Arial, sans-serif;
-    /* letter-spacing: .1em; */
-}
-
-/* Customized heading format */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-    margin: 1em 0;
-}
-
-h1 { font-size: 3.0em; } /* Title of the page */
-h2 { font-size: 2.5em; } /* Title of a main section */
-h3 { font-size: 2.2em; } /* Subsection title within a section */
-h4 { font-size: 1.9em; } /* Sub-subsection titles */
-h5 { font-size: 1.6em; } /* title for cards */
-h6 { font-size: 1.3em; } /* subtitle for cards */
+} */
