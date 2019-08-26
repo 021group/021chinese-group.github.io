@@ -30,7 +30,7 @@ nav {
     justify-content: center;
 
     min-width: 100%;
-    height: calc(var(--nav-video-height) + var(--nav-video-overshot));
+    /* height: calc(var(--nav-video-height) + var(--nav-video-overshot)); */
     transform: translateY(calc( -1 * (var(--nav-ol-height) + var(--nav-video-overshot))));
 
 
@@ -38,6 +38,9 @@ nav {
 }
 
 .video-video {
+
+    min-height: calc(var(--nav-video-height) + var(--nav-video-overshot));
+    /* min-width: 100%; */
 }
 
 .video-text {
