@@ -1,15 +1,16 @@
 
-.wrapper {
+.card-wrapper {
     display: flex;
+    flex-flow: row wrap;
 }
 
 @media only screen and (max-width:600px) {
-    .wrapper {
+    .card-wrapper {
         flex-direction: column;
     }
 }
 
-.wrapper .card {
+.card-wrapper .card {
     flex: 1;
     text-align: left;
 }
@@ -34,37 +35,4 @@ img {
     width: calc(100% + 2 * var(--side-padding));
     transform: translateX(calc( -1 * var(--side-padding)));
     background-image: linear-gradient(to left bottom, var(--ceg-y), var(--ceg-r));
-} */
-
-/* ------ wrapper ----- */
-
-/* .wrapper {
-    display: flex;
-}
-
-.wrapper .card {
-    /* display: block;
-    flex: 1;
-    color: white;
-    text-align: left;
-    background-image: url('../assets/photo1.png');
-    /* background-attachment: fixed;
-    /* background-blend-mode: luminosity;
-    background-size: 120%;
-}
-
-.wrapper .card > a.link {
-    color: white;
-}
-
-.wrapper .card h4, .wrapper .card p {
-    filter: drop-shadow(.1em .1em .2em black);
-}
-
-.wrapper .card h4 {
-    margin: 1em 0;
-    font-weight: 100;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    font-family: Arial, sans-serif;
 } */

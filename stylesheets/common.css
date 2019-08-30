@@ -16,6 +16,10 @@ h4 { font-size: 1.9em; } /* Sub-subsection titles */
 h5 { font-size: 1.6em; } /* title for cards */
 h6 { font-size: 1.3em; } /* subtitle for cards */
 
+section > header > h1, section > header > h2, section > header > h3, section > header > h4 {
+    margin-bottom: 0.75em;
+}
+
 body {
     line-height: 1.2em;
     /* font-size: 100%; */

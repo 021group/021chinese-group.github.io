@@ -1,0 +1,13 @@
+#milestones > ul {
+    background-color: #fff;
+}
+
+#milestones > ul > li > span {
+    /* background-color: #aaa; */
+}
+
+#milestones > ul > li > span:first-child::after {
+    /* border: 1px solid red; */
+    display: inline;
+    content: ": ";
+}
