@@ -43,9 +43,11 @@ main {
     background-color: #FFF;
 }
 
-.card:hover {
-    box-shadow: .3em .3em 1em rgba(0,0,0,0.5);
-    transform: translate(-.2em, -.2em) scale(1.03);
+@media only screen and (min-width:600px) {
+    .card:hover {
+        box-shadow: .3em .3em 1em rgba(0,0,0,0.5);
+        transform: translate(-.2em, -.2em) scale(1.03);
+    }
 }
 
 /* ------- a (links) -------- */
