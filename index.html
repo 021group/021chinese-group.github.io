@@ -7,6 +7,7 @@
     <title>Chinese Entrepreneurs Group</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/common.css" />
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css" />
+    <script src="scripts.js"></script>
 </head>
 <body>
     <nav class="dark compound">
@@ -18,15 +19,15 @@
             <li><a href="join-us.html">Join Us</a></li>
         </ol>
 
-        <section class="video">
-            <video class="video-video" loop="loop" autoplay="autoplay" muted> <!--   -->
+        <section class="video" onclick="videoOnClick();">
+            <video class="video-video" id="index-main-video" loop="loop" autoplay="autoplay" muted> <!--   -->
                 <source class="mp4" type="video/mp4" src="assets/ceg-video-export-5.mp4">
             </video>
-            <div class="video-text">
+            <div class="video-text" id="index-main-video-text">
                 Chinese Entrepreneurs Group<br>
                 ⬇︎&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
                 ⬇︎&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
-                ⬇︎<!-- ⇩⇩⇩↓ ↓ ↓ -->
+                ⬇︎
             </div>
         </section>
     </nav>
