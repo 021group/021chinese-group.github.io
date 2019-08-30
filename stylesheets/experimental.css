@@ -25,6 +25,28 @@ img {
     size: 10em 1em;
 }
 
+/* ------------------------------ */
+/* Add a gradient animation to text */
+/* This is so cool!! */
+/*
+h2 {
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(45deg,#f35626,#feab3a);
+    -webkit-text-fill-color: transparent;
+    animation: hue 6s infinite linear;
+}
+
+@keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+*/
+
 /* ------- test -------- */
 /* Alternative approach to hstrip */
 /* This element must be placed inside of main */
