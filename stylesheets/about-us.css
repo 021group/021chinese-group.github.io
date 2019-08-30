@@ -11,3 +11,23 @@
     display: inline;
     content: ": ";
 }
+
+#our-team > .card-wrapper {
+    flex-wrap: wrap;
+}
+
+#our-team > .card-wrapper > .card {
+    width: 33%;
+
+    padding: 0;
+    overflow: hidden;
+}
+
+.card-pic {
+
+}
+
+.card-text {
+    text-align: center;
+    margin-bottom: 1em;
+}
