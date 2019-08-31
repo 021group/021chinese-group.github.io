@@ -17,7 +17,11 @@ h5 { font-size: 1.6em; } /* title for cards */
 h6 { font-size: 1.3em; } /* subtitle for cards */
 
 section > header > h1, section > header > h2, section > header > h3, section > header > h4 {
-    margin-bottom: 0.75em;
+    margin-bottom: 0.5em;
+}
+
+section {
+    margin-bottom: 5em;
 }
 
 body {

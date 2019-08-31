@@ -25,6 +25,21 @@ img {
     size: 10em 1em;
 }
 
+._boxed {
+    border: 1px solid red;
+    position: relative;
+}
+
+/* ._boxed::after {
+    content: "➭";
+    display: block;
+    position: absolute;
+    top: 50%;
+    font-size: 3em;
+    color: red;
+    left: -40px;
+} */
+
 /* ------------------------------ */
 /* Add a gradient animation to text */
 /* This is so cool!! */
