@@ -30,6 +30,10 @@ img {
     position: relative;
 }
 
+.right-arrow::after {
+    content: "→";
+}
+
 /* ._boxed::after {
     content: "➭";
     display: block;

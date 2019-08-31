@@ -11,3 +11,9 @@ function videoOnClick() {
         videoText.innerHTML = PROMPT + videoText.innerHTML;
     }
 }
+
+function redirectToTestPage() {
+    document.title = "Redirecting...";
+    document.body.innerHTML = "<main><h5>This page does not exist yet.</h5>You will be send back to where you came from in 5 seconds.<br><br>Or, go to <a class='link', href='-test.html'>test page</a>.</main>";
+    setTimeout(() => {window.history.back();}, 5000);
+}
