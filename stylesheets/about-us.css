@@ -25,18 +25,21 @@
     overflow: hidden;
     max-width: 200px;
 
-    box-shadow: none;
+    box-shadow: none; /* Clear default */
     box-shadow: 0 0 .1em .1em var(--ceg-db);
     border-radius: .75em;
+    margin: .5em;
 }
 
 #our-team > .card-wrapper > .card:hover {
-    transform: none;
+    transform: none; /* Remove hover effect */
 }
 
 @media only screen and (min-width:600px) {
     #our-team > .card-wrapper {
         flex-flow: row wrap;
+        margin-left: calc( -0.5 * var(--side-padding));
+        margin-right: calc( -0.5 * var(--side-padding)); /* Give it a bit extra space, making it bigger */
     }
 
     #our-team > .card-wrapper > .card {
