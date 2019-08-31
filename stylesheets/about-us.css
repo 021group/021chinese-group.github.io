@@ -23,14 +23,12 @@
 #our-team > .card-wrapper > .card {
     padding: 0;
     overflow: hidden;
-    max-width: 300px;
+    max-width: 200px;
 }
 
 @media only screen and (min-width:600px) {
     #our-team > .card-wrapper {
         flex-flow: row wrap;
-        margin-left: -5%;
-        margin-right: -5%;
     }
 
     #our-team > .card-wrapper > .card {
