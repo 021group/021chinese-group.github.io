@@ -1,0 +1,14 @@
+#our-team > h3 {
+    margin-top: 2em;
+    margin-bottom: .5em;
+    font-weight: lighter;
+    font-size: 2em;
+    text-align: center;
+}
+
+#our-team > h3::before, #our-team > h3::after {
+    letter-spacing: -1mm;
+    content: "--------";
+    margin-left: .2em;
+    margin-right: .2em;
+}

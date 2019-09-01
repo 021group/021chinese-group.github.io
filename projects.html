@@ -7,6 +7,8 @@
     <title>Project & Events - Chinese Entrepreneurs Group</title>
     <script src="scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/common.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/our-team.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/projects.css" />
 </head>
 <body>
     <nav class="dark compound">
@@ -21,14 +23,56 @@
     </nav>
 
     <main>
-        <section>
+        <section id="current-projects">
             <header><h2>Current Projects</h2></header>
             Orientation, ProTalk, FirmVisit, LensWhale, VMI Studio
         </section>
 
-        <section>
-            <header><h2>Our Teams</h2></header>
+        <section id="our-team">
+            <header><h2>Our Team</h2></header>
             Administration, Marketing, DNA, IT, TR
+
+            <h3>Administration</h3>
+            <div class="card-wrapper">
+                <div class="card" name="Reason Tan" position="President"></div>
+                <div class="card" name="Sandy Jia" position="Vice President"></div>
+                <div class="card" name="Andy Yin" position="Vice President"></div>
+                <div class="card" name="Kevin Zhou" position="Vice President"></div>
+            </div>
+
+            <h3>Marketing</h3>
+            <div class="card-wrapper">
+                <div class="card" name="Lucy Chen" position="Marketing Director"></div>
+                <div class="card" name="Katrina ..?" position="??"></div>
+                <div class="card" name="..?" position="..?"></div>
+                <div class="card" name="..?" position="..?"></div>
+                <div class="card" name="..?" position="..?"></div>
+            </div>
+
+            <h3>..?</h3>
+            <div class="card-wrapper">
+                <div class="card" name="..?" position="..?"></div>
+                <div class="card" name="..?" position="..?"></div>
+                <div class="card" name="..?" position="..?"></div>
+                <div class="card" name="..?" position="..?"></div>
+                <div class="card" name="..?" position="..?"></div>
+            </div>
+
+<script>
+let cards = document.querySelectorAll("#our-team > .card-wrapper > .card");
+
+const template = '<div class="card-pic"><img src="__IMG_SRC__" alt="Picture of __NAME__"></div><div class="card-text"><h5>__NAME__</h5>__POSITION__</div>';
+
+for (let card of cards) {
+    const name = card.getAttribute('name');
+    const position = card.getAttribute('position');
+    const imgSrc = "assets/PH1x1.png";
+    card.innerHTML = (template
+    .replace(/__NAME__/g, name)
+    .replace(/__IMG_SRC__/g, imgSrc)
+    .replace(/__POSITION__/g, position));
+}
+</script>
         </section>
     </main>
 
