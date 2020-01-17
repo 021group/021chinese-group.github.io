@@ -1,3 +1,4 @@
+@import '_normalize.css';
 @import 'global-var.css';
 @import 'nav.css';
 @import 'experimental.css';
