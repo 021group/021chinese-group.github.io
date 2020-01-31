@@ -1,6 +1,18 @@
+'use strict';
+
+function $(selector, base = null) {
+    base = (base === null) ? document : base;
+    return base.querySelector(selector);
+}
+
+function $$(selector, base = null) {
+    base = (base === null) ? document : base;
+    return Array.from(base.querySelectorAll(selector));
+}
+
 function videoOnClick() {
-    let video = document.querySelector('#index-main-video');
-    let videoText = document.querySelector('#index-main-video-text');
+    let video = $('#index-main-video');
+    let videoText = $('#index-main-video-text');
 
     const PROMPT = "<h3>PAUSED</h3>";
     if (video.paused) {
