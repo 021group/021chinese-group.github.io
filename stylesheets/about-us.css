@@ -11,3 +11,16 @@
     display: inline;
     content: ": ";
 }
+
+.hidden-cards {
+    display: none;
+}
+
+.hidden-title {
+    display: none;
+}
+
+#btn {
+    background-color: #fff;
+    text-align: center;
+}
