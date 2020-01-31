@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -132,7 +132,7 @@
             </div>
 
             <script>
-                let cards = document.querySelectorAll("#our-team > .card-wrapper > .card");
+                let cards = $$("#our-team > .card-wrapper > .card");
 
                 const template = '<div class="card-pic"><img src="__IMG_SRC__" alt="Picture of __NAME__"></div><div class="card-text"><h5>__NAME__</h5>__POSITION__</div>';
 
@@ -147,8 +147,8 @@
                 }
 
                 function showCards() {
-                    let hidden_cards = document.getElementsByClassName("hidden-cards");
-                    let hidden_title = document.getElementsByClassName("hidden-title");
+                    let hidden_cards = $$(".hidden-cards");
+                    let hidden_title = $$(".hidden-title");
                     for (i = 0; i < hidden_cards.length; i++) {
                         hidden_cards[i].style.display = 'flex';
                     }
@@ -156,7 +156,7 @@
                     for (j = 0; j < hidden_title.length; j++) {
                         hidden_title[j].style.display = 'block';
                     }
-                    document.getElementById("btn").style.display = 'none';
+                    $("#btn").style.display = 'none';
                 }
             </script>
         </section>
