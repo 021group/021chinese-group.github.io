@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Key Generator</title>
+    <style>
+    #number {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+        padding: 20px;
+        margin: 20px;
+        border: 2px solid black;
+        text-transform: uppercase;
+        letter-spacing: 2mm;
+        width: 9em;
+        text-align: center;
+    }
+
+    a.button1{
+        display:inline-block;
+        padding:0.35em 1.2em;
+        border:0.1em solid black;
+        margin:0 0.3em 0.3em 0;
+        border-radius:0.12em;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        font-weight:300;
+        color:black;
+        text-align:center;
+        transition: all 0.2s;
+    }
+    a.button1:hover{
+        color:#333333;
+        background-color:#DDD;
+    }
+    @media all and (max-width:30em) {
+        a.button1 {
+            display: block;
+            margin: 0.4em auto;
+        }
+        #number {
+            width: 90%;
+            margin: 30px auto;
+            padding: 5px;
+        }
+    }
+
+
+    </style>
+</head>
+<body>
+
+    <script>
+        function b10to36(a) { return a.toString(36); }
+        function b36to10(s) { return parseInt(s, 36); }
+
+        // Feb 4, 2020, 12 AM (GMT -5)
+        const start = 1580792400;
+        const end = 1583298000;
+
+            let epoch = 100*(Math.floor(new Date().getTime()/1000.0) - start);
+        function generateNewNumber() {
+
+            // For rapid testing, move epoch line outside
+            // epoch += Math.floor(Math.random() * 200);
+            epoch += 6000;
+
+            // To decrypt, use t2n(removeP(final))
+            // To validate, user validate(final)
+
+            let final;
+
+            try {
+                final = appendP(n2t(epoch));
+            } catch (error) {
+                console.count('Error');
+                setTimeout(generateNewNumber, 500);
+                return;
+            }
+            console.count('Not error');
+
+            document.querySelector('#number').innerHTML = final.toUpperCase();
+
+            console.assert(validate(final));
+        }
+
+        function sum(s) {
+            return s.split("").reduce((p, c) => p + parseInt(c, 36), 0);
+        }
+
+        function validate(s) {
+            return sum(s) % 32 == 0;
+        }
+
+        function removeP(s) {
+            return s.substring(0, s.length - 1);
+        }
+
+        function appendP(s) {
+            let n = sum(s);
+            let complement = (32 - n % 32).toString(36);
+            return s + complement;
+        }
+
+        function n2t(epoch) {
+            let final = Encrypt(pad0(epoch.toString(2)), 4);
+            final = parseInt(final, 2);
+            final = Encrypt(pad0(b10to36(final), 6), 2);
+            return final;
+        }
+
+        function t2n(text) {
+            let final = Decrypt(text, 2);
+            final = b36to10(final).toString(2);
+            final = parseInt(Decrypt(pad0(final), 4), 2);
+            return final;
+        }
+
+        function pad0(s, w = 32) {
+            console.assert(s.length <= w);
+            return "0".repeat(w - s.length) + s;
+        }
+
+        function rev(s) { return s.split('').reverse().join(''); }
+
+        function Encrypt(s, k) {
+            console.assert(s.length % k == 0);
+            s = rev(s.substr(0, 2)) + s.substr(2);
+            s = s.substr(0, s.length - 2) + rev(s.substr(s.length - 2));
+
+            final = '';
+            for (let offset = 0; offset < k; offset++) {
+                let e = offset % 2 == 0;
+                for (let i = 0; i < s.length; i += k) {
+                    final += s[offset + i];
+                }
+            }
+            return final;
+        }
+
+        function Decrypt(s, k) {
+            console.assert(s.length % k == 0);
+            k = s.length / k;
+            final = '';
+            for (let offset = 0; offset < k; offset++) {
+                let e = offset % 2 == 0;
+                for (let i = 0; i < s.length; i += k) {
+                    final += s[offset + i];
+                }
+            }
+
+            s = final;
+
+            s = rev(s.substr(0, 2)) + s.substr(2);
+            s = s.substr(0, s.length - 2) + rev(s.substr(s.length - 2));
+
+            return s;
+        }
+
+        // setInterval(generateNewNumber, 50);
+
+        function copyText(text) {
+            var input = document.createElement('input');
+            input.setAttribute('value', text);
+            document.body.appendChild(input);
+            input.select();
+            var result = document.execCommand('copy');
+            document.body.removeChild(input);
+            return result;
+        }
+    </script>
+
+
+    <a class="button1" onclick="generateNewNumber()">New</a>
+    <a class="button1" onclick="copyText(document.querySelector('#number').innerHTML); generateNewNumber()">Copy</a>
+    <div id="number">-------</div>
+</body>
+</html>
