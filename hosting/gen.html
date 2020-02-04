@@ -46,7 +46,7 @@
         #number {
             width: 90%;
             margin: 30px auto;
-            padding: 5px;
+            padding: 10px;
         }
     }
 
@@ -63,12 +63,13 @@
         const start = 1580792400;
         const end = 1583298000;
 
-            let epoch = 100*(Math.floor(new Date().getTime()/1000.0) - start);
         function generateNewNumber() {
+            let epoch = 1000*(Math.floor(new Date().getTime()/1000.0) - start);
+            epoch += Math.ceil(Math.random() * 20);
 
             // For rapid testing, move epoch line outside
             // epoch += Math.floor(Math.random() * 200);
-            epoch += 6000;
+            // epoch += 6000;
 
             // To decrypt, use t2n(removeP(final))
             // To validate, user validate(final)
