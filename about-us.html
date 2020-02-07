@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us - Chinese Entrepreneurs Group</title>
     <script src="scripts.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/common.css" />
     <link rel="stylesheet" type="text/css" href="stylesheets/our-team.css" />
     <link rel="stylesheet" type="text/css" href="stylesheets/about-us.css" />
@@ -39,97 +40,28 @@
             </ul>
         </section>
 
-        <!---<section id="our-team">
-            <header><h2>Our Team</h2></header>
-            <div class="card-wrapper">
-                <div class="card">
-                    <div class="card-pic"><img src="assets/PH1x1.png"></div>
-                    <div class="card-text"><h5>Reason Tan</h5>President</div>
-                </div>
-                <div class="card">
-                    <div class="card-pic"><img src="assets/PH1x1.png"></div>
-                    <div class="card-text"><h5>Sandy Jia</h5>Vice President</div>
-                </div>
-                <div class="card">
-                    <div class="card-pic"><img src="assets/PH1x1.png"></div>
-                    <div class="card-text"><h5>Andy Yin</h5>Vice President</div>
-                </div>
-                <div class="card">
-                    <div class="card-pic"><img src="assets/PH1x1.png"></div>
-                    <div class="card-text"><h5>Kevin Zhou</h5>Vice President</div>
-                </div>
-            </div>
-            <div class="card-wrapper">
-                <div class="card">
-                    <div class="card-pic"><img src="assets/PH1x1.png"></div>
-                    <div class="card-text"><h5>Lorem</h5>Head of Loreming</div>
-                </div>
-                <div class="card">
-                    <div class="card-pic"><img src="assets/PH1x1.png"></div>
-                    <div class="card-text"><h5>Lorem</h5>Head of Loreming</div>
-                </div>
-                <div class="card">
-                    <div class="card-pic"><img src="assets/PH1x1.png"></div>
-                    <div class="card-text"><h5>Lorem</h5>Head of Loreming</div>
-                </div>
-                <div class="card">
-                    <div class="card-pic" style="visibility: hidden;"><img src="assets/PH1x1.png"></div>
-                    <div class="card-text"><h5><a class="link" href="projects.html#our-teams">See All <i class="right-arrow"></i></a></h5></div>
-                </div>
-            </div>
-        </section>--->
+
 
         <section id="our-team">
             <header><h2>Our Team</h2></header>
-            Administration, Marketing, DNA, IT, TR
 
-            <h3>Administration</h3>
-            <div class="card-wrapper">
-                <div class="card" name="Reason Tan" position="President"></div>
-                <div class="card" name="Sandy Jia" position="Vice President"></div>
-                <div class="card" name="Andy Yin" position="Vice President"></div>
-                <div class="card" name="Kevin Zhou" position="Vice President"></div>
+            <button class="collapsible" type="button">Administration</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repudiandae sit earum aspernatur odio veniam quia ducimus architecto libero assumenda expedita rem numquam reprehenderit culpa aut, voluptatum iure fugiat quae!</p>
             </div>
 
-            <h3>Marketing</h3>
-            <div class="card-wrapper">
-                <div class="card" name="Lucy Chen" position="Marketing Director"></div>
-                <div class="card" name="Katrina ..?" position="??"></div>
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
+            <button class="collapsible" type="button">Marketing</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sit officiis incidunt asperiores. Quam, aliquam minus omnis reprehenderit cupiditate porro in ullam nisi voluptate minima ipsum eligendi numquam ducimus mollitia.</p>
             </div>
 
-            <h3>DNA</h3>
-            <div class="card-wrapper">
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
+            <button class="collapsible" type="button">DNA</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, facere aperiam nisi molestiae dicta earum soluta iure doloremque commodi expedita, deleniti, repellat optio unde excepturi culpa autem possimus harum id!</p>
             </div>
 
-            <div class="card-wrapper">
-                <p class="link" id="btn" onclick="showCards()">See All</p>
-            </div>
 
-            <h3 class="hidden-title">IT</h3>
-            <div class="card-wrapper hidden-cards">
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-            </div>
 
-            <h3 class="hidden-title">TR</h3>
-            <div class="card-wrapper hidden-cards">
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-                <div class="card" name="..?" position="..?"></div>
-            </div>
 
             <script>
                 let cards = $$("#our-team > .card-wrapper > .card");
@@ -146,18 +78,11 @@
                     .replace(/__POSITION__/g, position));
                 }
 
-                function showCards() {
-                    let hidden_cards = $$(".hidden-cards");
-                    let hidden_title = $$(".hidden-title");
-                    for (i = 0; i < hidden_cards.length; i++) {
-                        hidden_cards[i].style.display = 'flex';
-                    }
-
-                    for (j = 0; j < hidden_title.length; j++) {
-                        hidden_title[j].style.display = 'block';
-                    }
-                    $("#btn").style.display = 'none';
-                }
+                let collapsible = $(".collapsible");
+                collapsible.click(function() {
+                    let content = $(this).next();
+                    content.slideToggle("slow");
+                });
             </script>
         </section>
 

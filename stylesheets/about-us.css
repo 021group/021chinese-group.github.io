@@ -12,15 +12,21 @@
     content: ": ";
 }
 
-.hidden-cards {
-    display: none;
+.collapsible {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    font-size: 16px;
 }
 
-.hidden-title {
-    display: none;
+.collapsible:hover {
+    background-color: darkgrey;
+    transition: 0.25s ease-in;
 }
 
-#btn {
-    background-color: #fff;
-    text-align: center;
+.content {
+    padding: 20px;
+    display: none;
+    background-color: aliceblue;
 }
