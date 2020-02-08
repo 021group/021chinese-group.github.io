@@ -45,22 +45,86 @@
         <section id="our-team">
             <header><h2>Our Team</h2></header>
 
-            <button class="collapsible" type="button">Administration</button>
+            <div class="collapsible">Administration</div>
             <div class="content">
+                <h6>Description</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repudiandae sit earum aspernatur odio veniam quia ducimus architecto libero assumenda expedita rem numquam reprehenderit culpa aut, voluptatum iure fugiat quae!</p>
+                <h6>Members</h6>
+                <p>Kevin, Andy, Sandy, Kelsi</p>
             </div>
 
-            <button class="collapsible" type="button">Marketing</button>
+            <br>
+            <div class="collapsible">BO</div>
             <div class="content">
+                <h6>Description</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sit officiis incidunt asperiores. Quam, aliquam minus omnis reprehenderit cupiditate porro in ullam nisi voluptate minima ipsum eligendi numquam ducimus mollitia.</p>
+                <h6>Members</h6>
+                <p>Coco，Jasmine，Estrella，Amy，Katrina Liu，Clair，Swann，Blink , Vivienne , Jacquelyn</p>
             </div>
-
-            <button class="collapsible" type="button">DNA</button>
+            <br>
+            <div class="collapsible">DNA</div>
             <div class="content">
+                <h6>Description</h6>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, facere aperiam nisi molestiae dicta earum soluta iure doloremque commodi expedita, deleniti, repellat optio unde excepturi culpa autem possimus harum id!</p>
+                <h6>Members</h6>
+                <p>Jasmine，Clair , Kerry , Penguin ，(Yan) , Rusy</p>
             </div>
-
-
+            <br>
+            <div class="collapsible">IT</div>
+            <div class="content">
+                <h6>Description</h6>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, facere aperiam nisi molestiae dicta earum soluta iure doloremque commodi expedita, deleniti, repellat optio unde excepturi culpa autem possimus harum id!</p>
+                <h6>Members</h6>
+                <p>Yifei，Xavier，Min，Leo，Kyra</p>
+            </div>
+            <br>
+            <div class="collapsible">外联赞助</div>
+            <div class="content">
+                <h6>Description</h6>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, facere aperiam nisi molestiae dicta earum soluta iure doloremque commodi expedita, deleniti, repellat optio unde excepturi culpa autem possimus harum id!</p>
+                <h6>Members</h6>
+                <p>Bella，Kyra，Colin，Jacky，Zeyu , Jacquelyn , Ricardo</p>
+            </div>
+            <br>
+            <div class="collapsible">Protalk</div>
+            <div class="content">
+                <h6>Description</h6>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, facere aperiam nisi molestiae dicta earum soluta iure doloremque commodi expedita, deleniti, repellat optio unde excepturi culpa autem possimus harum id!</p>
+                <h6>Members</h6>
+                <p>Estrella，Zeyu，Leonard，Lily，Penguin，Amy</p>
+            </div>
+            <br>
+            <div class="collapsible">TR</div>
+            <div class="content">
+                <h6>Description</h6>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, facere aperiam nisi molestiae dicta earum soluta iure doloremque commodi expedita, deleniti, repellat optio unde excepturi culpa autem possimus harum id!</p>
+                <h6>Members</h6>
+                <p>Kelsi，Olive，Karina，Vivian，Rayna，Kerry，Katrina Liu，Erica，Nicole , Sandy, Tina</p>
+            </div>
+            <br>
+            <div class="collapsible">VMI</div>
+            <div class="content">
+                <h6>Description</h6>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, facere aperiam nisi molestiae dicta earum soluta iure doloremque commodi expedita, deleniti, repellat optio unde excepturi culpa autem possimus harum id!</p>
+                <h6>Members</h6>
+                <p>Celi，Selena，Jack，Susy , Nicole</p>
+            </div>
+            <br>
+            <div class="collapsible">Film Visit</div>
+            <div class="content">
+                <h6>Description</h6>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, facere aperiam nisi molestiae dicta earum soluta iure doloremque commodi expedita, deleniti, repellat optio unde excepturi culpa autem possimus harum id!</p>
+                <h6>Members</h6>
+                <p>Blink，Jessica , Cherie</p>
+            </div>
+            <br>
+            <div class="collapsible">特别影片拍摄</div>
+            <div class="content">
+                <h6>Description</h6>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, facere aperiam nisi molestiae dicta earum soluta iure doloremque commodi expedita, deleniti, repellat optio unde excepturi culpa autem possimus harum id!</p>
+                <h6>Members</h6>
+                <p>Andy , Selena , Vivienne , Erick，katherine</p>
+            </div>
 
 
             <script>
@@ -80,6 +144,7 @@
 
                 let collapsible = $(".collapsible");
                 collapsible.click(function() {
+                    $(this).toggleClass("active");
                     let content = $(this).next();
                     content.slideToggle("slow");
                 });
