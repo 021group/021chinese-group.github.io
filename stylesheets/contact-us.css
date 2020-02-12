@@ -1,0 +1,6 @@
+main {
+    background-color: var(--ceg-lb);
+    background-attachment: fixed;
+    background-size:cover;
+    opacity: 0.9;
+}
