@@ -13,20 +13,25 @@
 }
 
 .collapsible {
-    background-color: rgb(225, 237, 248);
+    background-color: white;
+    color: var(--ceg-lb);
     padding: 20px;
     width: 100%;
     text-align: center;
     font-size: 20px;
+    transition: 1s;
+    border-bottom: 1px lightgray solid;
+    cursor: pointer;
 }
 
 .collapsible:hover, .active {
-    background-color: rgb(189, 207, 223);
-    transition: 0.25s ease-in;
+    background-color: var(--ceg-db);
+    color: white;
+    transition: 0.5s ease-in;
 }
 
 .content {
     padding: 20px;
     display: none;
-    background-color: rgb(240, 240, 240);
+    background-color: aliceblue;
 }
