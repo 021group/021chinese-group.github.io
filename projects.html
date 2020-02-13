@@ -108,5 +108,12 @@ ProTalk, Firm Visit, LensWhale, 城市定向, 特别摄影组, lll 哲学论坛,
     </main>
 
     <footer>Copyright &copy; 2019 Chinese Entrepreneurs Group. All rights reserved.</footer>
+    <script>
+        $$('.project-wrapper').forEach(element => {
+            element.onmousewheel = function (event) {
+                $('.scroll-bar', this).scrollBy({ left: event.deltaY / 3, behavior: 'smooth'});
+            };
+        });
+    </script>
 </body>
 </html>

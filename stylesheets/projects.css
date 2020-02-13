@@ -45,6 +45,7 @@ main {
 
 .project-wrapper .project-intro{
     width: 58%;
+    color: #3C4043;
 }
 
 .inside-wrap{
@@ -57,7 +58,7 @@ main {
 
 .project-wrapper .scroll-bar{
     margin-bottom: 2em;
-    height: 200px;
+    height: 25vh;
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -66,9 +67,9 @@ main {
     -webkit-overflow-scrolling: touch;
 }
 
-.project-wrapper .scroll-bar > img{
-    height: 100%;
-    margin: 20px;
+.project-wrapper .scroll-bar > img {
+    height: 95%;
+    margin-right: 20px;
 }
 
 /* element::-webkit-scrollbar {display: none;} */
