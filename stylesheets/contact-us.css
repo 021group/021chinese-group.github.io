@@ -1,5 +1,5 @@
 
-.inf{
+.inf {
     background-color:rgba(33, 99, 170, 0.2);
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -25,9 +25,6 @@
 }
 
 #wechat-logo {
-    /* width: 200px; */
-    /* height: 50px; */
-    /* margin-left: 20px; */
     margin-top: 10px;
     width: 40%;
     display: block;
@@ -59,5 +56,18 @@
 
 .sm-img {
     height: 30px;
-    margin-right: 5px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width:600px) {
+    .inf {
+        flex-direction: column;
+    }
+
+    #vertical-bound {
+        display: none;
+    }
+
+    #wechat-qr { width: 50%; order: 1; }
+    #wechat-logo {width: 30%; order: 0; }
 }
