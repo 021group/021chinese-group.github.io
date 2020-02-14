@@ -11,3 +11,27 @@
     display: inline;
     content: ": ";
 }
+
+.collapsible {
+    background-color: white;
+    color: var(--ceg-lb);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    transition: 1s;
+    border-bottom: 1px lightgray solid;
+    cursor: pointer;
+}
+
+.collapsible:hover, .active {
+    background-color: var(--ceg-db);
+    color: white;
+    transition: 0.5s ease-in;
+}
+
+.content {
+    padding: 20px;
+    display: none;
+    background-color: aliceblue;
+}
