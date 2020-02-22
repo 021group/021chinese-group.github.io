@@ -1,0 +1,77 @@
+
+.inf {
+    background-color:rgba(33, 99, 170, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    padding: 50px 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wechat {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#wechat-qr {
+    width: 70%;
+    mix-blend-mode: darken;
+}
+
+#wechat-logo {
+    margin-top: 10px;
+    width: 40%;
+    display: block;
+}
+
+#vertical-bound {
+    width: 2px;
+    align-self: stretch;
+    background: #000;
+}
+
+#others {
+    flex: 3;
+}
+
+.sm-link {
+    font-size: 20px;
+}
+
+.sm-link[href]:hover {
+    text-decoration: underline;
+}
+
+.sm-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sm-img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+#email {
+    word-break: break-word;
+}
+
+@media only screen and (max-width:600px) {
+    .inf {
+        flex-direction: column;
+    }
+
+    #vertical-bound {
+        display: none;
+    }
+
+    #wechat-qr { width: 50%; order: 1; }
+    #wechat-logo {width: 30%; order: 0; }
+}
