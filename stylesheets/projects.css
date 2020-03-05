@@ -26,10 +26,16 @@ h3 {
     flex-wrap: nowrap;
     flex-direction: column;
     height: 100vh;
+    --text-color: #3C4043;
 }
 
-.project-wrapper:nth-child(even){
-    background-color: beige;
+.project-wrapper:nth-child(even) {
+    background-color: var(--ceg-lb);
+    --text-color: #eee;
+}
+
+.project-wrapper:nth-child(even) * {
+    color: var(--text-color);
 }
 
 .project-wrapper .project-img{
@@ -37,9 +43,9 @@ h3 {
     box-shadow:  0 0 5px rgba(0,0,0,1);
 }
 
-.project-wrapper .project-intro{
+.project-wrapper .project-intro {
     width: 58%;
-    color: #3C4043;
+    color: var(--text-color);
 }
 
 .inside-wrap{
