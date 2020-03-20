@@ -5,37 +5,38 @@
 
 main {
     padding: 2em 0;
-    /* background-color: var(--ceg-g); */
 }
 
-#project-list h3{
+h2 {
+    padding: 0 var(--side-padding);
+}
+
+h3 {
     width: 100%;
     margin-top: 2em;
     margin-bottom: .5em;
-    font-weight: lighter;
+    font-weight: bold;
     font-size: 30px;
     text-align: center;
 }
 
-#project-list h3::before, #project-list h3::after {
-    letter-spacing: -1mm;
-    content: "--------";
-    margin-left: .2em;
-    margin-right: .2em;
-}
-
-.project-wrapper{
+.project-wrapper {
     padding: 0 var(--side-padding);
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: space-between; */
     height: 100vh;
+    --text-color: #3C4043;
+    justify-content: space-around;
 }
 
-.project-wrapper:nth-child(even){
-    background-color: beige;
+.project-wrapper:nth-child(even) {
+    background-color: var(--ceg-lb);
+    --text-color: #eee;
+}
+
+.project-wrapper:nth-child(even) * {
+    color: var(--text-color);
 }
 
 .inside-wrap .project-img{
@@ -43,9 +44,14 @@ main {
     box-shadow:  0 0 5px rgba(0,0,0,1);
 }
 
-.inside-wrap .project-intro{
+.project-wrapper .project-intro {
     width: 58%;
-    color: #3C4043;
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 150%;
+    overflow: hidden;
+    height: 70vh;
+    overflow-y: scroll;
 }
 
 .inside-wrap{
@@ -62,7 +68,7 @@ main {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
@@ -83,11 +89,20 @@ element::-webkit-scrollbar {display: none;}
         width: 80%;
     }
 
-    .inside-wrap{
-        flex-direction: column;
+@media  only screen and (max-width: 600px){
+    .project-wrapper{
+        height: 150vh;
     }
 
-    .inside-wrap p{
-        font-size: .8em;
+    .project-wrapper .scroll-bar{
+        display: none;
+    }
+
+    .project-wrapper .project-img{
+        width: 60%;
+    }
+
+    .inside-wrap{
+        flex-direction: column;
     }
 }

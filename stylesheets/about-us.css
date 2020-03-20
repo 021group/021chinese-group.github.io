@@ -35,3 +35,11 @@
     display: none;
     background-color: aliceblue;
 }
+
+.content h6 {
+    margin-bottom: 0;
+}
+
+.content p {
+    margin-top: 0.25em;
+}

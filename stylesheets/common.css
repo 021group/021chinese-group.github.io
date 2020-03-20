@@ -90,8 +90,8 @@ a.link:hover::before {
 footer {
     /* min-height: 10em; */
     margin-top: 5em;
-    background-color: var(--ceg-lb);
+    background-color: var(--ceg-db);
     padding: 4em var(--side-padding);
-    color: white;
+    color: #BBB;
     text-align: center;
 }
