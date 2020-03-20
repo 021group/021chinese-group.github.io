@@ -27,6 +27,7 @@ h3 {
     flex-direction: column;
     height: 100vh;
     --text-color: #3C4043;
+    justify-content: space-around;
 }
 
 .project-wrapper:nth-child(even) {
@@ -48,6 +49,9 @@ h3 {
     color: var(--text-color);
     font-size: 18px;
     line-height: 150%;
+    overflow: hidden;
+    height: 70vh;
+    overflow-y: scroll;
 }
 
 .inside-wrap{
@@ -55,7 +59,7 @@ h3 {
     flex:1;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .project-wrapper .scroll-bar{
@@ -76,8 +80,20 @@ h3 {
 
 /* element::-webkit-scrollbar {display: none;} */
 
-/* @media  only screen and (max-width: 600px){
+@media  only screen and (max-width: 600px){
+    .project-wrapper{
+        height: 150vh;
+    }
+
+    .project-wrapper .scroll-bar{
+        display: none;
+    }
+
+    .project-wrapper .project-img{
+        width: 60%;
+    }
+
     .inside-wrap{
         flex-direction: column;
     }
-} */
+}
