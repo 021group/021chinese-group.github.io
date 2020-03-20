@@ -82,15 +82,6 @@ element::-webkit-scrollbar {display: none;}
 
 @media  only screen and (max-width: 600px){
     .project-wrapper{
-        height: 125vh;
-    }
-
-    .inside-wrap .project-intro{
-        width: 80%;
-    }
-
-@media  only screen and (max-width: 600px){
-    .project-wrapper{
         height: 150vh;
     }
 
