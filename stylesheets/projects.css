@@ -30,6 +30,10 @@ h3 {
     justify-content: space-around;
 }
 
+.has-scroll-bar{
+    height: 150vh;
+}
+
 .project-wrapper:nth-child(even) {
     background-color: var(--ceg-lb);
     --text-color: #eee;
@@ -49,9 +53,8 @@ h3 {
     color: var(--text-color);
     font-size: 18px;
     line-height: 150%;
-    overflow: hidden;
     height: 70vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .inside-wrap{
@@ -62,19 +65,18 @@ h3 {
     justify-content: space-around;
 }
 
-.project-wrapper .scroll-bar{
+.scroll-bar{
     margin-bottom: 2em;
-    height: 25vh;
+    height: 40vh;
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
     overflow-x: auto;
-    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
-.project-wrapper .scroll-bar > img {
-    height: 95%;
+.scroll-bar > img {
+    height: 40vh;
     margin-right: 20px;
 }
 
@@ -85,7 +87,7 @@ element::-webkit-scrollbar {display: none;}
         height: 150vh;
     }
 
-    .project-wrapper .scroll-bar{
+    .scroll-bar{
         display: none;
     }
 
