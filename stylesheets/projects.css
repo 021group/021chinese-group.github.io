@@ -86,6 +86,7 @@ h3 {
 }
 
 .scroll-bar > img:hover{
+    z-index:10;
     transform: scale(1.5);
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
