@@ -1,97 +1,131 @@
-@import '_normalize.css';
-@import 'global-var.css';
-@import 'nav.css';
-@import 'experimental.css';
+@import "_normalize.css";
+@import "global-var.css";
+@import "nav.css";
+@import "experimental.css";
 
-* { box-sizing: border-box;  }
-body { margin: 0; padding: 0; font-family: 'Noto Sans SC', sans-serif; }
-
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans SC", sans-serif;
+}
 
 /* Customized formats */
-a { text-decoration: none; color: inherit; }
-h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 1em 0; line-height: normal; }
-h1 { font-size: 3.0em; } /* Title of the page */
-h2 { font-size: 2.5em; } /* Title of a main section */
-h3 { font-size: 2.2em; } /* Subsection title within a section */
-h4 { font-size: 1.9em; } /* Sub-subsection titles */
-h5 { font-size: 1.6em; } /* title for cards */
-h6 { font-size: 1.3em; } /* subtitle for cards */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 1em 0;
+  line-height: normal;
+}
+h1 {
+  font-size: 3em;
+} /* Title of the page */
+h2 {
+  font-size: 2.5em;
+} /* Title of a main section */
+h3 {
+  font-size: 2.2em;
+} /* Subsection title within a section */
+h4 {
+  font-size: 1.9em;
+} /* Sub-subsection titles */
+h5 {
+  font-size: 1.6em;
+} /* title for cards */
+h6 {
+  font-size: 1.3em;
+} /* subtitle for cards */
 
-section > header > h1, section > header > h2, section > header > h3, section > header > h4 {
-    margin-bottom: 0.5em;
+section > header > h1,
+section > header > h2,
+section > header > h3,
+section > header > h4 {
+  margin-bottom: 0.5em;
 }
 
 section {
-    margin-bottom: 5em;
+  margin-bottom: 5em;
 }
 
 body {
-    line-height: 1.2em;
-    /* font-size: 100%; */
+  line-height: 1.2em;
+  /* font-size: 100%; */
 }
 
 main {
-    padding: 2em var(--side-padding);
-    /* background-color: var(--ceg-g); */
+  padding: 2em var(--side-padding);
+  /* background-color: var(--ceg-g); */
 }
 
 /* ----- card ------ */
 
 .card {
-    margin: 1em;
-    border-radius: 0.3em;
-    transition: .5s;
-    padding: 1em 0.5em;
-    text-align: center;
-    display: inline-block;
-    box-shadow: 0 0 .5em rgba(0,0,0,0.25);
-    background-color: #FFF;
+  margin: 1em;
+  border-radius: 0.3em;
+  transition: 0.5s;
+  padding: 1em 0.5em;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
+  background-color: #fff;
 }
 
-@media only screen and (min-width:600px) {
-    .card:hover {
-        box-shadow: .3em .3em 1em rgba(0,0,0,0.5);
-        transform: translate(-.2em, -.2em) scale(1.03);
-    }
+@media only screen and (min-width: 600px) {
+  .card:hover {
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.5);
+    transform: translate(-0.2em, -0.2em) scale(1.03);
+  }
 }
 
 /* ------- a (links) -------- */
 .link {
-    cursor: pointer;
-    border-bottom: .1em solid var(--ceg-db);
-    position: relative;
-    transition: 0.2s ease-out;
-    color: var(--ceg-db);
+  cursor: pointer;
+  border-bottom: 0.1em solid var(--ceg-db);
+  position: relative;
+  transition: 0.2s ease-out;
+  color: var(--ceg-db);
 }
 
 .link:hover {
-    color: var(--ceg-lb);
-    border-bottom: .1em solid var(--ceg-lb);
-
+  color: var(--ceg-lb);
+  border-bottom: 0.1em solid var(--ceg-lb);
 }
 
 .link::before {
-    content: "";
-    display: block; position: absolute;
-    top: 0; left: 50%;
-    width: 0; height: 100%;
-    z-index: 1;
-    transition: 0.2s ease-out;
-    border-bottom: .15em solid var(--ceg-lb);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  z-index: 1;
+  transition: 0.2s ease-out;
+  border-bottom: 0.15em solid var(--ceg-lb);
 }
 
 a.link:hover::before {
-    left: 0;
-    width: 100%;
+  left: 0;
+  width: 100%;
 }
 
 /* ----- footer ----- */
 
 footer {
-    /* min-height: 10em; */
-    margin-top: 5em;
-    background-color: var(--ceg-db);
-    padding: 4em var(--side-padding);
-    color: #BBB;
-    text-align: center;
+  /* min-height: 10em; */
+  margin-top: 5em;
+  background-color: var(--ceg-db);
+  padding: 4em var(--side-padding);
+  color: #ddd;
+  text-align: center;
 }
