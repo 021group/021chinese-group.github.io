@@ -27,5 +27,45 @@ function videoOnClick() {
 function redirectToTestPage() {
     document.title = "Redirecting...";
     document.body.innerHTML = "<main><h5>This page does not exist yet.</h5>You will be send back to where you came from in 5 seconds.<br><br>Or, go to <a class='link', href='-test.html'>test page</a>.</main>";
-    setTimeout(() => {window.history.back();}, 5000);
+    setTimeout(() => {window.history.back();}, 1000);
 }
+
+window.onload = function(){
+    // for project.html img-lst's // img-lst1
+    var children = $('#img-lst1').children;
+    var curInd = 0;
+
+    var timer = setInterval(function(){
+        if (curInd == 0){
+            children[children.length-1].classList.remove('zoomIn');
+        }else{
+            children[curInd-1].classList.remove('zoomIn');
+        }
+        children[curInd].classList.add('zoomIn');
+        if (++curInd == children.length) curInd = 0;
+    },2000);
+
+    for (let j = 0; j<children.length ;j++){
+        children[j].onmouseout = function(){
+            timer = setInterval(function(){
+                if (curInd == 0){
+                    children[children.length-1].classList.remove('zoomIn');
+                }else{
+                    children[curInd-1].classList.remove('zoomIn');
+                }
+                children[curInd].classList.add('zoomIn');
+                if (++curInd == children.length) curInd = 0;
+            },2000);
+        };
+
+        children[j].onmouseover = function(){
+            clearInterval(timer);
+            for (let k = 0; k<children.length ;k++){
+                if (k==j) children[k].classList.add('zoomIn');
+                else children[k].classList.remove('zoomIn');
+            }
+            curInd = j; // start from where we left
+        };
+    }
+}
+

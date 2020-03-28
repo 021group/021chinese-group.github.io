@@ -30,6 +30,10 @@ h3 {
     justify-content: space-around;
 }
 
+.has-img-lst{
+    height: 150vh;
+}
+
 .project-wrapper:nth-child(even) {
     background-color: var(--ceg-lb);
     --text-color: #eee;
@@ -39,7 +43,7 @@ h3 {
     color: var(--text-color);
 }
 
-.project-wrapper .project-img{
+.inside-wrap .project-img{
     width: 38%;
     box-shadow:  0 0 5px rgba(0,0,0,1);
 }
@@ -49,9 +53,8 @@ h3 {
     color: var(--text-color);
     font-size: 18px;
     line-height: 150%;
-    overflow: hidden;
-    height: 70vh;
-    overflow-y: scroll;
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
 .inside-wrap{
@@ -62,30 +65,42 @@ h3 {
     justify-content: space-around;
 }
 
-.project-wrapper .scroll-bar{
+.img-lst{
     margin-bottom: 2em;
-    height: 25vh;
+    height: 40vh;
     display: flex;
-    flex-wrap: nowrap;
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
 }
 
-.project-wrapper .scroll-bar > img {
-    height: 95%;
+.img-lst > img {
+    height: 20vh;
     margin-right: 20px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    opacity:0.3;
 }
 
-/* element::-webkit-scrollbar {display: none;} */
+/* only for .img-lst > img */
+.img-lst > img.zoomIn{
+    z-index:10;
+    transform: scale(1.5);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    opacity:1;
+}
+
+element::-webkit-scrollbar {display: none;}
 
 @media  only screen and (max-width: 600px){
     .project-wrapper{
         height: 150vh;
     }
 
-    .project-wrapper .scroll-bar{
+    .img-lst{
         display: none;
     }
 

@@ -32,7 +32,7 @@ ProTalk, Firm Visit, LensWhale, 城市定向, 特别摄影组, lll 哲学论坛,
 
     <main>
         <section id="project-list">
-            <div class="project-wrapper">
+            <div class="project-wrapper has-img-lst">
                 <h3>ProTalk</h3>
                 <div class="inside-wrap">
                     <img src="assets/project_img/protalk.jpg" alt="protalk" class="project-img">
@@ -62,29 +62,12 @@ ProTalk, Firm Visit, LensWhale, 城市定向, 特别摄影组, lll 哲学论坛,
                         </p>
                     </div>
                 </div>
-                <div class="scroll-bar">
+                <div class="img-lst" id="img-lst1">
                     <img src="assets/project_img/protalk-1.JPG" alt="">
                     <img src="assets/project_img/protalk-2.JPG" alt="">
                     <img src="assets/project_img/protalk-3.JPG" alt="">
                 </div>
             </div>
-            <!-- div class="project-wrapper">
-                <h3>Firm Visit</h3>
-                <div class="inside-wrap">
-                    <img src="assets/project_img/firmvisit.jpeg" alt="firmvisit" class="project-img">
-                    <p class="project-intro">
-                        Firm Visit是对每一个在校大学生一种全新的体验。它能让学生去不同公司访问的过程中，相互交流，了解到很多在课堂上就学不到的，更加详细的企业
-                        运营的实际经验，如供应链，政企关系，企业管理等一些列实际操作的规模，技巧和手段。更重要的是能亲身体会初创公司的氛围与实际的工作状态，而不
-                        仅仅只是停留在一些文字资料甚至不知消息来源的口口相传上。Firm Visit 能为未来的真实的工作扫清不必要的环境障碍，也能为将来走向社会打下坚
-                        实的基础。
-                    </p>
-                    <div class="scroll-bar">
-                        <img src="assets/project_img/dummy.png" alt="">
-                        <img src="assets/project_img/dummy.png" alt="">
-                        <img src="assets/project_img/dummy.png" alt="">
-                    </div>
-                </div>
-            </div -->
             <div class="project-wrapper">
                 <h3>LensWhale</h3>
                 <div class="inside-wrap">
@@ -133,7 +116,7 @@ ProTalk, Firm Visit, LensWhale, 城市定向, 特别摄影组, lll 哲学论坛,
                             The Ship of the Theseus Project (SofT) is committed to customize videos for customers with professional equipment, and will send the video to customer after 7 years. In 7 years, when the customer experiences the ups and downs, the customer may have forgotten us; and we are going to give them this little surprise-the opportunity to enjoy watching the time flow, to protect the memory that will be eventually lose.
                         </p>
                     </div>
-                    <!-- div class="scroll-bar">
+                    <!-- div class="img-lst">
                         <img src="assets/project_img/Soft-2.JPG" alt="">
                         <img src="assets/project_img/Soft-3.PNG" alt="">
                     </div -->
@@ -162,7 +145,7 @@ ProTalk, Firm Visit, LensWhale, 城市定向, 特别摄影组, lll 哲学论坛,
                         </p>
                     </div>
                     </div>
-                <!-- <div class="scroll-bar">
+                <!-- <div class="img-lst">
                     <img src="assets/project_img/dummy.png" alt="">
                     <img src="assets/project_img/dummy.png" alt="">
                     <img src="assets/project_img/dummy.png" alt="">
@@ -172,13 +155,6 @@ ProTalk, Firm Visit, LensWhale, 城市定向, 特别摄影组, lll 哲学论坛,
     </main>
 
     <footer>Copyright &copy; 2019 Chinese Entrepreneurs Group. All rights reserved.</footer>
-    <script>
-        $$('.project-wrapper').forEach(element => {
-            element.onmousewheel = function (event) {
-                $('.scroll-bar', this).scrollBy({ left: event.deltaY / 3, behavior: 'smooth' });
-            };
-        });
-    </script>
 </body>
 
 </html>
