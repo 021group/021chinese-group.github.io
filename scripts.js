@@ -32,30 +32,28 @@ function redirectToTestPage() {
 
 window.onload = function(){
     // for project.html img-lst's // img-lst1
-    var children = $('#img-lst1').children;
-    var curInd = 0;
+    const children = $('#img-lst1').children;
+    let curInd = 0;
 
-    var timer = setInterval(function(){
-        if (curInd == 0){
-            children[children.length-1].classList.remove('zoomIn');
-        }else{
-            children[curInd-1].classList.remove('zoomIn');
-        }
-        children[curInd].classList.add('zoomIn');
-        if (++curInd == children.length) curInd = 0;
-    },2000);
+    function setTimer(){
+        return setInterval(function(){
+            if (curInd == 0){
+                children[children.length-1].classList.remove('zoomIn');
+            }else{
+                children[curInd-1].classList.remove('zoomIn');
+            }
+            children[curInd].classList.add('zoomIn');
+            if (++curInd == children.length) curInd = 0;
+        },2000);
+    }
+    let timer = setTimer();
 
+    children.onmouseenter = function(){
+        timer = setTimer();
+    };
     for (let j = 0; j<children.length ;j++){
         children[j].onmouseout = function(){
-            timer = setInterval(function(){
-                if (curInd == 0){
-                    children[children.length-1].classList.remove('zoomIn');
-                }else{
-                    children[curInd-1].classList.remove('zoomIn');
-                }
-                children[curInd].classList.add('zoomIn');
-                if (++curInd == children.length) curInd = 0;
-            },2000);
+            timer = setTimer();
         };
 
         children[j].onmouseover = function(){
