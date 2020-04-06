@@ -194,3 +194,20 @@ function weightedRange(to, from, decimalPlaces, weightedRange, weightStrength)
    }
    return(ret);
 }
+
+onload = function(){
+    var particles
+    (function(){
+        particles = new ParticleEngine('projector');
+        createjs.Ticker.addEventListener("tick", updateCanvas);
+        window.addEventListener('resize', resizeCanvas, false);
+
+        function updateCanvas(){
+            particles.render();
+        }
+
+        function resizeCanvas(){
+            particles.resize();
+        }
+    }());
+};

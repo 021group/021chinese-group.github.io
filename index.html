@@ -44,22 +44,6 @@
 
     <main>
         <canvas id="projector">Your browser does not support the Canvas element.</canvas>
-        <script>
-            var particles
-            (function(){
-                particles = new ParticleEngine('projector');
-                createjs.Ticker.addEventListener("tick", updateCanvas);
-                window.addEventListener('resize', resizeCanvas, false);
-
-                function updateCanvas(){
-                    particles.render();
-                }
-
-                function resizeCanvas(){
-                    particles.resize();
-                }
-            }());
-        </script>
         <section>
             <header><h2>Latest News</h2></header>
             <div class="card-wrapper">
