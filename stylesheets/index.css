@@ -54,3 +54,16 @@ nav {
     position: absolute;
     bottom: 5vh;
 }
+
+.image-container {
+
+}
+
+.image-container img {
+    max-width: 300px;
+    max-height: 150px;
+}
+
+#cibc-logo {
+    background-color: #B00B1C;
+}

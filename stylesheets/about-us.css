@@ -1,5 +1,7 @@
 #milestones > ul {
     background-color: #fff;
+    font-size: 1.2em;
+    line-height: 1.6em;
 }
 
 #milestones > ul > li > span {
@@ -34,4 +36,12 @@
     padding: 20px;
     display: none;
     background-color: aliceblue;
+}
+
+.content h6 {
+    margin-bottom: 0;
+}
+
+.content p {
+    margin-top: 0.25em;
 }
