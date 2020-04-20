@@ -70,12 +70,12 @@ main {
 	height:100%;
 	overflow: hidden;
 	background: var(--ceg-db);
-    /* filter:
+    filter:
         progid: DXImageTransform.Microsoft.gradient(
             startColorstr='#191d1e',
             endColorstr='#283139',
-            GradientType=1 ); */
-	background-attachment: fixed
+            GradientType=1 );
+    background-attachment: fixed;
 }
 
 section{
