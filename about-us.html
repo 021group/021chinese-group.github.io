@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163172021-1"></script>
+    <script>
+        if (document.location.hostname.includes('chinese-network.org')) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-163172021-1');
+        } else {
+            console.log('Not sending google analytics for development');
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About  - Chinese Entrepreneurs Group</title>
+    <title>About - Chinese Entrepreneurs Group</title>
     <link rel="shortcut icon" href="assets/021favicon.png">
     <script src="scripts.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -13,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/our-team.css" />
     <link rel="stylesheet" type="text/css" href="stylesheets/about-us.css" />
 </head>
+
 <body>
     <nav class="dark compound">
         <ol>
@@ -22,17 +36,23 @@
             <li><a href="contact-us.html">Contact</a></li>
             <li><a href="join-us.html">Join Us</a></li>
         </ol>
-        <div class="merged strip"><h1>About Us</h1></div>
+        <div class="merged strip">
+            <h1>About Us</h1>
+        </div>
     </nav>
 
     <main>
         <section id="we-are">
-            <header><h2>We Are</h2></header>
+            <header>
+                <h2>We Are</h2>
+            </header>
             <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae officia repudiandae fuga mollitia totam amet nihil, dolore culpa dolorem iusto magni impedit officiis, quisquam sit minus molestiae debitis! Consectetur.</h6>
         </section>
 
         <section id="milestones">
-            <header><h2>Milestones</h2></header>
+            <header>
+                <h2>Milestones</h2>
+            </header>
             <ul>
                 <li><span>2018-09</span><span>Start</span></li>
                 <li><span>2019-02</span><span>Compatible</span></li>
@@ -45,7 +65,9 @@
 
 
         <section id="our-team">
-            <header><h2>Our Team</h2></header>
+            <header>
+                <h2>Our Team</h2>
+            </header>
 
             <div class="collapsible">Administration</div>
             <div class="content">
@@ -101,13 +123,13 @@
                     const position = card.getAttribute('position');
                     const imgSrc = "assets/PH1x1.png";
                     card.innerHTML = (template
-                    .replace(/__NAME__/g, name)
-                    .replace(/__IMG_SRC__/g, imgSrc)
-                    .replace(/__POSITION__/g, position));
+                        .replace(/__NAME__/g, name)
+                        .replace(/__IMG_SRC__/g, imgSrc)
+                        .replace(/__POSITION__/g, position));
                 }
 
                 let collapsible = $(".collapsible");
-                collapsible.click(function() {
+                collapsible.click(function () {
                     $(this).toggleClass("active");
                     let content = $(this).next();
                     content.slideToggle();
@@ -120,4 +142,5 @@
     <footer>Copyright &copy; 2020 Chinese Entrepreneurs Group. All rights reserved.</footer>
 
 </body>
+
 </html>
