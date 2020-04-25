@@ -19,12 +19,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About - Chinese Entrepreneurs Group</title>
     <link rel="shortcut icon" href="assets/021favicon.png">
-    <script src="scripts.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script>$.noConflict();</script>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheets/common.css" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/our-team.css" />
     <link rel="stylesheet" type="text/css" href="stylesheets/about-us.css" />
+
+    <!-- Falling Stars -->
+    <link rel="stylesheet" type="text/css" href="externalcode/ambient.css">
+    <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -40,6 +43,22 @@
             <h1>About Us</h1>
         </div>
     </nav>
+    <div class="night">
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+    </div>
 
     <main>
         <section id="we-are">
@@ -61,8 +80,6 @@
                 <li><span>2019-05</span><span>ipsum dolor</span></li>
             </ul>
         </section>
-
-
 
         <section id="our-team">
             <header>
@@ -109,29 +126,15 @@
                 <h6>Description</h6>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, facere aperiam nisi molestiae dicta earum soluta iure doloremque commodi expedita, deleniti, repellat optio unde excepturi culpa autem possimus harum id!</p>
                 <h6>Members</h6>
-                <p>Kelsi，Olive，Karina，Vivian，Rayna，Kerry，Katrina Liu，Erica，Nicole , Sandy, Tina</p>
+                <p>Kelsi, Olive, Karina, Vivian, Rayna, Kerry, Katrina Liu, Erica, Nicole , Sandy, Tina</p>
             </div>
 
 
             <script>
-                let cards = $$("#our-team > .card-wrapper > .card");
-
-                const template = '<div class="card-pic"><img src="__IMG_SRC__" alt="Picture of __NAME__"></div><div class="card-text"><h5>__NAME__</h5>__POSITION__</div>';
-
-                for (let card of cards) {
-                    const name = card.getAttribute('name');
-                    const position = card.getAttribute('position');
-                    const imgSrc = "assets/PH1x1.png";
-                    card.innerHTML = (template
-                        .replace(/__NAME__/g, name)
-                        .replace(/__IMG_SRC__/g, imgSrc)
-                        .replace(/__POSITION__/g, position));
-                }
-
-                let collapsible = $(".collapsible");
+                let collapsible = jQuery(".collapsible");
                 collapsible.click(function () {
-                    $(this).toggleClass("active");
-                    let content = $(this).next();
+                    jQuery(this).toggleClass("active");
+                    let content = jQuery(this).next();
                     content.slideToggle();
                 });
             </script>

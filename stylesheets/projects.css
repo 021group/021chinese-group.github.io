@@ -35,11 +35,11 @@ h3 {
 }
 
 .project-wrapper:nth-child(even) {
-    background-color: var(--ceg-lb);
+    background-color: rgba(26, 79, 134, 0.8);
     --text-color: #eee;
 }
 
-.project-wrapper:nth-child(even) * {
+.project-wrapper * {
     color: var(--text-color);
 }
 

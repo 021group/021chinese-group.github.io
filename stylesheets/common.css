@@ -1,7 +1,10 @@
-@import "_normalize.css";
-@import "global-var.css";
-@import "nav.css";
-@import "experimental.css";
+@import 'common/_normalize.css';
+@import 'common/global-var.css';
+@import 'common/nav.css';
+@import 'common/experimental.css';
+
+* { box-sizing: border-box;  }
+body { margin: 0; padding: 0; font-family: 'Noto Sans SC', sans-serif; }
 
 * {
   box-sizing: border-box;
@@ -122,10 +125,8 @@ a.link:hover::before {
 /* ----- footer ----- */
 
 footer {
-  /* min-height: 10em; */
-  margin-top: 5em;
-  background-color: var(--ceg-db);
-  padding: 4em var(--side-padding);
-  color: #ddd;
-  text-align: center;
+    background-color: var(--ceg-db);
+    padding: 4em var(--side-padding);
+    color: #BBB;
+    text-align: center;
 }

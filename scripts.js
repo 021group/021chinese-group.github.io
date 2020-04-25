@@ -27,43 +27,34 @@ function videoOnClick() {
 function redirectToTestPage() {
     document.title = "Redirecting...";
     document.body.innerHTML = "<main><h5>This page does not exist yet.</h5>You will be send back to where you came from in 5 seconds.<br><br>Or, go to <a class='link', href='-test.html'>test page</a>.</main>";
-    setTimeout(() => {window.history.back();}, 1000);
+    setTimeout(() => { window.history.back(); }, 1000);
 }
 
-window.onload = function(){
-    // for project.html img-lst's // img-lst1
-    const children = $('#img-lst1').children;
-    let curInd = 0;
-
-    function setTimer(){
-        return setInterval(function(){
-            if (curInd == 0){
-                children[children.length-1].classList.remove('zoomIn');
-            }else{
-                children[curInd-1].classList.remove('zoomIn');
-            }
-            children[curInd].classList.add('zoomIn');
-            if (++curInd == children.length) curInd = 0;
-        },2000);
-    }
-    let timer = setTimer();
-
-    children.onmouseenter = function(){
-        timer = setTimer();
+function StarsParallax() {
+    function repositionStars() {
+        const scrollMaxY = window.scrollMaxY || (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+        let scrollPercentage = window.scrollY / scrollMaxY;
+        scrollPercentage = Math.max(scrollPercentage, 1);
+        scrollPercentage = Math.min(scrollPercentage, 0);
+        const MaxDiffFromCenter = document.documentElement.clientHeight / 4;
+        const offset = 2 * MaxDiffFromCenter * (scrollPercentage - 0.5);
+        // $('.night').style.transform = `translate-y(${offset.toFixed(5)}px)`;
+        $('.night').style.top = `${offset.toFixed(5)}px`;
     };
-    for (let j = 0; j<children.length ;j++){
-        children[j].onmouseout = function(){
-            timer = setTimer();
-        };
-
-        children[j].onmouseover = function(){
-            clearInterval(timer);
-            for (let k = 0; k<children.length ;k++){
-                if (k==j) children[k].classList.add('zoomIn');
-                else children[k].classList.remove('zoomIn');
-            }
-            curInd = j; // start from where we left
-        };
-    }
+    $('body').onscroll = repositionStars;
+    document.onresize = repositionStars;
+    repositionStars();
+    $('nav').style.position = 'relative';
+    $('nav').style.zIndex = '0';
+    $('main').style.position = 'relative';
+    $('main').style.zIndex = '2';
 }
 
+document.onreadystatechange = function () {
+    if (window.location.pathname.includes('about-us') ||
+        window.location.pathname.includes('projects') ||
+        window.location.pathname.includes('contact') ||
+        window.location.pathname.includes('join')) {
+        StarsParallax();
+    }
+}
