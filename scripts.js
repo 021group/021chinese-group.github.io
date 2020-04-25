@@ -29,3 +29,30 @@ function redirectToTestPage() {
     document.body.innerHTML = "<main><h5>This page does not exist yet.</h5>You will be send back to where you came from in 5 seconds.<br><br>Or, go to <a class='link', href='-test.html'>test page</a>.</main>";
     setTimeout(() => { window.history.back(); }, 1000);
 }
+
+function StarsParallax() {
+    function repositionStars() {
+        const scrollMaxY = window.scrollMaxY || (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+        const scrollPercentage = window.scrollY / scrollMaxY;
+        const MaxDiffFromCenter = document.documentElement.clientHeight / 4;
+        const offset = 2 * MaxDiffFromCenter * (scrollPercentage - 0.5);
+        // $('.night').style.transform = `translate-y(${offset.toFixed(5)}px)`;
+        $('.night').style.top = `${offset.toFixed(5)}px`;
+    };
+    $('body').onscroll = repositionStars;
+    document.onresize = repositionStars;
+    repositionStars();
+    $('nav').style.position = 'relative';
+    $('nav').style.zIndex = '0';
+    $('main').style.position = 'relative';
+    $('main').style.zIndex = '2';
+}
+
+document.onreadystatechange = function (ev) {
+    if (window.location.pathname.includes('about-us') ||
+        window.location.pathname.includes('projects') ||
+        window.location.pathname.includes('contact') ||
+        window.location.pathname.includes('join')) {
+        StarsParallax();
+    }
+}
