@@ -34,8 +34,8 @@ function StarsParallax() {
     function repositionStars() {
         const scrollMaxY = window.scrollMaxY || (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         let scrollPercentage = window.scrollY / scrollMaxY;
-        scrollPercentage = Math.max(scrollPercentage, 1);
-        scrollPercentage = Math.min(scrollPercentage, 0);
+        scrollPercentage = Math.min(scrollPercentage, 1);
+        scrollPercentage = Math.max(scrollPercentage, 0);
         const MaxDiffFromCenter = document.documentElement.clientHeight / 4;
         const offset = 2 * MaxDiffFromCenter * (scrollPercentage - 0.5);
         // $('.night').style.transform = `translate-y(${offset.toFixed(5)}px)`;

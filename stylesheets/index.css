@@ -64,18 +64,15 @@ nav {
 .image-container img {
     max-width: 300px;
     max-height: 150px;
+    border-radius: 5px;
 }
 
-#cibc-logo {
-    background-color: #B00B1C;
-}
 
 main {
     position: relative;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	/* background: var(--ceg-lb); */
     filter:
         progid: DXImageTransform.Microsoft.gradient(
             startColorstr='#191d1e',
