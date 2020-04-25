@@ -1,7 +1,13 @@
+body {
+    background-color: var(--ceg-db);
+}
+
 nav {
     /* --nav-text-color: gray !important; */
     --nav-video-overshot: 3rem;
     --nav-video-height: 100vh;
+    position: relative;
+    z-index: 200;
 }
 
 @media only screen and (max-width:600px) {
@@ -66,10 +72,10 @@ nav {
 
 main {
     position: relative;
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
-	background: var(--ceg-db);
+	/* background: var(--ceg-lb); */
     filter:
         progid: DXImageTransform.Microsoft.gradient(
             startColorstr='#191d1e',

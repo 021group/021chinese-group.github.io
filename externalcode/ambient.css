@@ -1,21 +1,14 @@
-/* z-index in main, main section and .night are important*/
-main {
-    z-index: -100;
-}
-
-main section{
-z-index: 0;
-}
-
 .night {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
--webkit-transform: rotateZ(45deg);
-        transform: rotateZ(45deg);
-z-index: -50;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transform: rotateZ(45deg) scale(1.2);
+            transform: rotateZ(45deg) scale(1.2);
+    pointer-events: none;
+    opacity: 0.3;
 }
 
 .shooting_star {

@@ -1,7 +1,7 @@
-@import '_normalize.css';
-@import 'global-var.css';
-@import 'nav.css';
-@import 'experimental.css';
+@import 'common/_normalize.css';
+@import 'common/global-var.css';
+@import 'common/nav.css';
+@import 'common/experimental.css';
 
 * { box-sizing: border-box;  }
 body { margin: 0; padding: 0; font-family: 'Noto Sans SC', sans-serif; }

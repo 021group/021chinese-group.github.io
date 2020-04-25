@@ -1,5 +1,5 @@
 #milestones > ul {
-    background-color: #fff;
+    background-color: transparent;
 }
 
 #milestones > ul > li > span {
@@ -13,7 +13,7 @@
 }
 
 .collapsible {
-    background-color: white;
+    background-color: transparent;
     color: var(--ceg-lb);
     padding: 20px;
     width: 100%;
@@ -25,7 +25,7 @@
 }
 
 .collapsible:hover, .active {
-    background-color: var(--ceg-db);
+    background-color: rgba(var(--ceg-db-R),var(--ceg-db-G),var(--ceg-db-B),0.8);
     color: white;
     transition: 0.5s ease-in;
 }
@@ -33,7 +33,7 @@
 .content {
     padding: 20px;
     display: none;
-    background-color: aliceblue;
+    background-color: rgba(var(--ceg-lb-R),var(--ceg-lb-G),var(--ceg-lb-B),0.08);
 }
 
 .content h6 {
